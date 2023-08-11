@@ -74,9 +74,9 @@ export default class Shop extends Component {
                 <header className="main-header">
                     <nav className="main-nav nav">
                         <ul>
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">STORE</a></li>
-                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#section">HOME</a></li>
+                            <li><a href="#section">STORE</a></li>
+                            <li><a href="#section">ABOUT</a></li>
                         </ul>
                     </nav>
                     <h1 className="band-name band-name-large">SabzLearn Shop</h1>

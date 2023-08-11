@@ -13,7 +13,7 @@ export default class CartProduct extends Component {
         return (
             <div className="cart-row">
                 <div className="cart-item cart-column">
-                    <img className="cart-item-image" src={img} width="100" height="100" />
+                    <img className="cart-item-image" src={img} width="100" height="100" alt='img'/>
                     <span className="cart-item-title">{title}</span>
                 </div>
                 <span className="cart-price cart-column">${price}</span>
