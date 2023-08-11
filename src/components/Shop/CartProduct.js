@@ -1,22 +1,25 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react'
 
 export default class CartProduct extends Component {
-    clickhandler(){
-        console.log("from cartProduc");
+
+    clickHandler (id) {
+        this.props.onRemove(id)
     }
+
     render() {
 
-        return (
-            <div className="cart-row">
-                <div className="cart-item cart-column">
-                    <img className="cart-item-image" src="Images/Shirt.png" width="100" height="100" />
-                    <span className="cart-item-title">Shirt</span>
-                </div>
-                <span className="cart-price cart-column">$198</span>
-                <div className="cart-quantity cart-column">
+        let {id, title, price, img} = this.props
 
-                    <button className="btn btn-danger" type="button" onClick={this.clickhandler} >REMOVE</button>
+        return (
+            <div class="cart-row">
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src={img} width="100" height="100" />
+                    <span class="cart-item-title">{title}</span>
+                </div>
+                <span class="cart-price cart-column">${price}</span>
+                <div class="cart-quantity cart-column">
+
+                    <button class="btn btn-danger" type="button" onClick={this.clickHandler.bind(this, id)}>REMOVE</button>
                 </div>
             </div>
         )
