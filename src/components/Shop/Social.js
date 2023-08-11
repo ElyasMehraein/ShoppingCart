@@ -7,8 +7,8 @@ export default class Social extends Component {
 
         return (
             <li>
-                <a href={href} target="_blank">
-                    <img src={img} />
+                <a href={href} target="_blank" rel="noreferrer">
+                    <img src={img} alt='img' />
                 </a>
             </li>
         )

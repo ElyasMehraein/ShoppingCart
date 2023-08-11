@@ -11,13 +11,13 @@ export default class Product extends Component {
         let {id, title, price, img} = this.props
 
         return (
-            <div class="shop-item">
-                <span class="shop-item-title">{title}</span>
-                <img class="shop-item-image" src={img} />
-                <div class="shop-item-details">
-                    <span class="shop-item-price">${price}</span>
+            <div className="shop-item">
+                <span className="shop-item-title">{title}</span>
+                <img className="shop-item-image" src={img} alt='img'/>
+                <div className="shop-item-details">
+                    <span className="shop-item-price">${price}</span>
                     <button
-                        class="btn btn-primary shop-item-button"
+                        className="btn btn-primary shop-item-button"
                         type="button"
                         onClick={this.clickHandler.bind(this, id)}>
                         ADD TO CART

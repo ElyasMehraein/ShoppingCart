@@ -71,49 +71,49 @@ export default class Shop extends Component {
     render() {
         return (
             <>
-                <header class="main-header">
-                    <nav class="main-nav nav">
+                <header className="main-header">
+                    <nav className="main-nav nav">
                         <ul>
                             <li><a href="#">HOME</a></li>
                             <li><a href="#">STORE</a></li>
                             <li><a href="#">ABOUT</a></li>
                         </ul>
                     </nav>
-                    <h1 class="band-name band-name-large">SabzLearn Shop</h1>
+                    <h1 className="band-name band-name-large">SabzLearn Shop</h1>
                 </header>
-                <section class="container content-section">
-                    <div class="shop-items">
+                <section className="container content-section">
+                    <div className="shop-items">
 
                         {this.state.products.map(product => (
-                            <Product {...product} onAddProduct={this.addProductToCart} />
+                            <Product key={product.id} {...product} onAddProduct={this.addProductToCart} />
                         ))}
                     </div>
                 </section>
-                <section class="container content-section">
-                    <h2 class="section-header">CART</h2>
-                    <div class="cart-row">
-                        <span class="cart-item cart-header cart-column">ITEM</span>
-                        <span class="cart-price cart-header cart-column">PRICE</span>
-                        <span class="cart-quantity cart-header cart-column">Doing</span>
+                <section className="container content-section">
+                    <h2 className="section-header">CART</h2>
+                    <div className="cart-row">
+                        <span className="cart-item cart-header cart-column">ITEM</span>
+                        <span className="cart-price cart-header cart-column">PRICE</span>
+                        <span className="cart-quantity cart-header cart-column">Doing</span>
                     </div>
-                    <div class="cart-items">
+                    <div className="cart-items">
 
                         {this.state.shoppingCart.map(product => (
-                            <CartProduct {...product} onRemove={this.removeProductFromCart} />
+                            <CartProduct  key={product.id} {...product} onRemove={this.removeProductFromCart} />
                         ))}
 
 
                     </div>
-                    <button class="btn btn-primary btn-purchase" type="button" onClick={this.emptyShoppingCart}>
+                    <button className="btn btn-primary btn-purchase" type="button" onClick={this.emptyShoppingCart}>
                         Empty Cart
                     </button>
                 </section>
-                <footer class="main-footer">
-                    <div class="container main-footer-container">
-                        <h3 class="band-name">The Generics</h3>
-                        <ul class="nav footer-nav">
+                <footer className="main-footer">
+                    <div className="container main-footer-container">
+                        <h3 className="band-name">The Generics</h3>
+                        <ul className="nav footer-nav">
                             {this.state.socials.map(social => (
-                                <Social {...social} />
+                                <Social key={social.id} {...social} />
                             ))}
                         </ul>
                     </div>
